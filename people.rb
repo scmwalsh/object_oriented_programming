@@ -12,19 +12,24 @@ class Person
 
 end
 
-class Student
+class Student <Person
 	def learn
 		puts "I get it!"
 	end
 
 end
 
-class Instructor
+class Instructor <Person
 	def teach
 		puts "Everything is Ruby is an object"
 	end
 
 end
+
+Chris = Instructor.new("Chris")
+Chris.Greeting
+Christina = Student.new("Christina")
+Christina.Greeting
 
 
 
