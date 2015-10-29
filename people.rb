@@ -1,5 +1,13 @@
 #Question 1
 #Question 2
+#Question 3
+#Question 4
+class Person
+	def initialize(name)
+		@name = name
+	end
+end
+
 class Student
 	def learn
 		puts "I get it!"
