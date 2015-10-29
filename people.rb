@@ -31,6 +31,8 @@ Chris.Greeting
 Christina = Student.new("Christina")
 Christina.Greeting
 
+#Question 8 doesnt work because the method is not assigned to the class
+
 
 
 
