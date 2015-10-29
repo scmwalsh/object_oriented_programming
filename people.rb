@@ -1,5 +1,9 @@
 #Question 1
+#Question 2
 class Student
+	def learn
+		puts "I get it!"
+	end
 
 end
 
