@@ -7,28 +7,28 @@ end
 
 
 	def read_instruction
-	user.input = gets.chomp
-	if user.input == "m"
+		user_input = gets.chomp
+		if user_input == "m"
 		move
-	else
-		turn(user.input)
+		else
+		turn(user_input)
 
-	end	
-end
+		end	
+	end
 
 	def move 
 		if @d == "n"
 			@y = @y + 1
 		elsif @d == "s"
-			@y = @y + 1
+			@y = @y - 1
 		elsif @d == "e"
 			@x = @x + 1
 		else @d == "w"
-			@x = @x + 1 
+			@x = @x - 1 
 		end	
 	end
 
-	def turn (d)
+	def turn(d)
 		if d == "l"
 			if @d == "n"
 			@d = "w"
@@ -38,7 +38,8 @@ end
 			@d = "n"
 			else 
 			@d = "s"
-			end		
+			end
+				
 	
 		else #R
 			if @d == "n"
@@ -54,6 +55,12 @@ end
 		end
 	end
 
+	def display_coordinates
+		puts "#{@x}, #{@y}, #{@d}"
+	end
+
 end
 
 action = Rover.new(1, 2, "n")
+action.read_instruction
+action.display_coordinates
